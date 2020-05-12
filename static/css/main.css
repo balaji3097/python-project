@@ -1,0 +1,155 @@
+  
+  .pad-left{
+  margin-left:80px;
+  }
+  .pad-bot{
+  margin-bottom:10px;
+  }
+ 
+ .pad-top{
+ margin-top:10px;
+ }
+ .pad{
+ padding:15px;
+ }
+ .banner{
+ position:relative;
+ width:100%;
+ left:0;
+ right:0;
+ top:0;
+ height: 100%;
+ background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+ }
+.row{
+width:100%;
+margin:0px;
+}
+
+.content img{
+width:100%;
+margin:0 auto;
+height:270px;
+}
+.content{
+  width:100%;
+}
+.full{
+padding-right:0px !important;
+padding-left:0px !important;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color:#b9bbeb !important;
+  background: rgba(24,24,24,0.6)!important;
+  z-index:100;
+}
+li{float:left;
+list-style:none;
+padding:0px;
+margin-right:25px;
+cursor:pointer;
+}
+
+.col-lg-8 ul{
+float:left;
+ margin:0px;
+ padding:6px;
+ 
+}
+
+ .col-lg-4 ul{
+ 
+ margin:0px;
+ float:right;
+ padding:8px;}
+ 
+.shop_header
+{
+width:100%;
+background-color: rgba(116, 196, 196, 0.747);
+}
+.col-lg-8{
+float:left;
+padding-top:19px;}
+
+.col-lg-4{
+float:right;
+padding-top:19px;}
+
+.col-lg-12{
+float:left;}
+
+.col-sm-3{
+padding:0px;
+
+}
+.col-sm-3 h3,h4,h5{
+  padding-left:10px;
+}
+.col-sm-3:hover{
+
+  cursor:pointer;
+   box-shadow: 1px 1px 8px 1px #888888;
+  
+  }
+
+.mar{
+  padding-left: 10px;
+}
+  .w3-section  i {
+    font-size: 35px;
+  }
+  
+  i{
+    font-size: 20px;
+  }
+  .fa-spin-custom, .glyphicon-spin {
+    -webkit-animation: spin 1000ms infinite linear;
+    animation: spin 1000ms infinite linear;
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+footer{
+  padding:20px;
+  background-color:rgb(188, 192, 207);
+}
+footer li{
+  padding:0px;
+}
+
+h3{
+  font-weight: bold;
+  color:grey;
+}
+h4{
+ 
+ 
+}
+h5{
+  height:30px;
+ 
+}

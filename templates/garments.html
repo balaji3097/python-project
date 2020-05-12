@@ -1,0 +1,111 @@
+{% load static %}
+{% static "images" as Baseurl %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Garments</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" href="{% static 'css/main.css' %}"/>
+   <script src="{%static 'js/app.js' %}"></script>
+   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+   
+  
+</head>
+<body>
+
+<div class="container-fluid full" >
+
+
+	<div class="row">
+	
+	<div class="banner" >
+		<img src="{%static 'images/banner.jpg'%}"/>
+	</div>
+	
+<!-- header-->
+  <div id="myHeader"class="col-lg-12  shop_header pad-bot" >
+		<div class="col-lg-8 " >
+			<ul>
+				<li>
+					<p style="margin: 0 0 10px; font-size: 21px; font-weight:900px;">
+						<span style='color: rgb(255, 0, 191)'>G</span>
+						<span style='color:yellow'>A</span>
+						<span style='color: blue'>R</span>
+						<span style='color: green'>M</span>
+						<span style='color: green'>E</span>
+						<span style='color: green'>N</span>
+						<span style='color: rgb(255, 0, 76)'>T</span>
+						<span style='color: rgb(255, 0, 242)'>S</span>
+					  </p>
+				</li>
+				<li>
+					<div class="w3-section">
+						<i style="color:#7db1ab;" class="fas fa-tshirt fa-spin-custom "></i>
+						</div>
+				</li>
+					
+				<li>
+					
+					<form action="search" method="POST">
+						{% csrf_token %}
+					<input type="text" placeholder="Search products here" name="item" style="border:none; " autocomplete="off"/>
+					<input style="color:rgb(67, 67, 131); font-weight:bold; border:none;"  type="submit"/>
+				</form>
+				</li>
+				<li style="color:red;"> {{war}}</li>
+				
+			</ul> 
+		</div>
+	
+		<div class="col-lg-4 pad" >
+		<ul>
+			<li><a href="#"><b>HOME</b></a></li>
+			<li><a href="#"><b>ABOUT US</b></a></li>
+			<li><a href="#"><b>HELP ?</b></a></li>
+		</ul> </div>
+		
+   </div>
+ 
+   <div class="content">
+	   {% for brand in obj%}
+	   {% for brands in brand%}
+	  
+    <div class="col-sm-3 pad-left pad-bot pad-top" >
+		
+		<div name="image" ><img src="{{brands.img.url}}"/></div>
+		<div><h3>{{brands.brand_name}}</h3></div>
+		<div name="desc"><h5>{{brands.desc}}</h5></div>
+		<div name="price"><h4>${{brands.price}}</h4></div>
+	
+		
+	</div>
+
+	{% endfor %}
+
+	 {% endfor %}
+	</div>
+	<!--footer-->
+	<footer class="col-sm-12 ">
+		<ul>
+		<li class="col-sm-4 "></li>
+		<li class="col-sm-4 ">© 2020 Copyright:<b>Garments-cart.com</b></li>
+		<li class="col-sm-4 "></li>
+
+	</ul>
+		
+	</footer>
+
+
+  </div>
+   
+  	</div>
+	
+	
+
+</body>
+</html>

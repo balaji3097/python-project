@@ -1,0 +1,172 @@
+{% load static %}
+{% static "images" as Baseurl %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Insurance</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+   <script src="{%static 'js/app.js' %}"></script>
+   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  
+   
+  
+</head>
+<body>
+
+<div class="container-fluid full" >
+    <div class="row">
+	    <div class="banner" >
+            <div class="l_banner">
+                <img src="{%static 'images/insurance-banner.jpg'%}"/>
+            </div>
+            
+	    </div>
+	
+                <!-- header-->
+        <div id="myHeader"class="col-lg-12  shop_header  h" >
+            <div class="logo">
+                <img src="{%static 'images/company_logo.jpg'%}"/>
+            </div>
+            <div class="links">   
+                <div class="headings"><a href="insure_procedure"><b>Insure</b></a></div> 
+                <div class="headings"><a href="claim_procedure"><b>Claim </b></a></div> 
+                <div class="headings"> <a href="renew_procedure"><b>Renew</b></a></div> 
+                <div class="headings"><a href="#"><b>Support</b></a></div> 
+                <div class="headings"><a href="#"><b>About Us</b></a></div> 
+            </div>
+            <div class="contact">
+                <div class="number">contact:9897695437</div>
+                <div class="glyphicon glyphicon-earphone con_logo"></div>
+                
+            </div>
+
+				  
+		</div>
+ 
+        
+        
+        
+        <!--content part-->
+        
+        
+        <div class="content  ">
+            <div class="upper">
+                <div id="myCarousel" class="carousel slide">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators" style="margin:0px auto; width:50%; ">
+                      <li class="item1 active" style="background-color: brown;" ></li>
+                      <li class="item2" style="background-color: brown;"></li>
+                      
+                    </ol>
+                
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                
+                      <div class="item active">
+                        <img src="{% static 'images/side_banner.jpg'%}" style="width:100%; height:300px;">
+                        
+                      </div>
+                
+                      <div class="item" >
+                        <img src="{% static 'images/side_banner4.png'%}" style="width:100%; height:300px;" >
+                        
+                      </div>
+                    
+                      
+                
+                      
+                  
+                    </div>
+                
+                   
+                  </div>
+                
+                <div class="inner_upper2">
+                    <div class="claim">
+                        <div  class="claim_logo">
+                            <div><i class='fas fa-car-side' style='font-size:48px;color:rgba(128, 131, 148, 0.8);'></i></div>
+                        </div>
+                        
+                        <div class="but">
+                            <button type="button" class="btn btn-primary">BUY</button>
+                        </div>
+                    </div>    
+
+
+                    <div class="claim">
+                        <div class="claim_logo">
+                            <i class='fas fa-car-crash' style='font-size:48px;color:rgba(128, 131, 148, 0.8);'></i>   
+                        </div>
+                       
+                        <div class="but">
+                            <button type="button" class="btn btn-warning">CLAIM</button>
+                        </div>
+                    </div>    
+
+
+                    <div class="claim">
+                        <div class="renew">
+                            <h3 style="padding:0px;margin:0px;">RENWEL</h3>   
+                        </div>
+                        <div class="policy_box">
+                            <input type="text" placeholder="policy no"/>
+                        </div>
+                        
+                        <div class="but">
+                            <button type="button" class="btn btn-info">Get</button>
+                        </div>
+                    </div>    
+
+                </div>
+                
+                           
+            </div>
+	   
+            <div class="lower">
+                <div class="lower_header">
+                    <div class="head">
+                       What's Covered Under vehicle Insurance?
+                    </div>
+                </div>
+
+                {% for brand in obj%}
+                <div class="col-sm-3 l-left l-right " >
+                   
+                    <div><h4>{{brand.b_contentname}}</h4></div>
+                    <div class="desc">
+                        <p>{{brand.b_contentdesc}}​</p>
+                    </div>
+                </div>
+              
+                   {%endfor%}
+              
+               
+
+               
+                
+            </div>
+            
+            
+
+	    </div>
+	    <!--footer-->
+	    <footer class="col-sm-12 ">
+		    <ul>
+                <li class="col-sm-4 "></li>
+                <li class="col-sm-4 ">© 2020 Copyright:<b>Insurance.com</b></li>
+                <li class="col-sm-4 "></li>
+            </ul>
+		
+	    </footer>
+    </div>
+</div>
+	
+	
+
+</body>
+</html>
